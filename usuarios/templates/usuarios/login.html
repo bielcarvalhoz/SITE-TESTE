@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- LINKS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login/login.css' %}">
+    <!-- SCRIPTS -->
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/login/login.js' %}"></script>
+</head>
+<body>
+    <div id="main_div" class="vw-100 vh-100 d-flex align-items-center justify-content-center">
+        <div id="main_box" class="h-75 rounded p-3 row d-flex align-items-center">
+            <div id="image_box" class="col-8 h-100 d-flex flex-column align-items-center justify-content-between">
+                <div class="w-100">
+                    <h1>Bielzz-JS</h1>
+                </div>
+                <div id="footer">
+                    <a href="https://github.com/Bielzz-JS" target="_blank" rel="noopener noreferrer">github.com/Bielzz-JS</a>
+                </div>
+            </div>
+            <div id="box_form" class="col-4 h-100 rounded p-3">
+                <div id="form" class="d-flex flex-column h-75">
+                    <h2>Login</h2>
+                    <form action="{% url 'login' %}" method="post" class="w-100 d-flex flex-column align-items-center mt-4"> {% csrf_token %}
+                        <div class="form-floating mb-3 w-100">
+                            <input type="text" name="username" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Usuário</label>
+                        </div>
+                        <div class="form-floating mb-3 w-100">
+                            <input type="password" name="senha" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Senha</label>
+                        </div>
+                        <a class="w-100 text-end mb-3" href="">Esqueci minha senha</a>
+                        <button type="submit" class="btn btn-primary btn-lg w-75 btn-submit btn-4 mb-3">Login</button>
+                        <div class="hr-sect w-100">
+                            <span>
+                                OU
+                            </span>
+                        </div>
+                        <div id="alternative_login" class="w-100">
+                            <button class="social-media-ico mb-3 w-100">
+                                <img class="w-6 h-6" src="https://www.svgrepo.com/show/475656/google-color.svg" loading="lazy" alt="google logo">
+                                <span>Entrar com Google</span>
+                            </button>
+                            <button class="social-media-ico fb w-100">
+                                <img class="w-6 h-6" src="{% static 'img/facebook.svg' %}" loading="lazy" alt="google logo">
+                                <span>Entrar com Facebook</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <!-- <div>
+                    Ainda não tem uma conta? Cadastre-se aqui
+                </div> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
