@@ -16,6 +16,7 @@ body {
 #box_form {
     background-color: var(--main-color-theme);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: auto;
 }
 
 #image_box {
@@ -28,10 +29,7 @@ body {
 .social-media-ico {
     transition-duration: 150ms;
     color: rgb(51 65 85 / var(--tw-text-opacity));
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: .5rem;
     border-width: 1px;
     border-radius: 0.5rem;
     gap: 0.5rem;
@@ -40,6 +38,7 @@ body {
     border-style: solid;
     border-color: #e5e7eb;
     background-color: transparent;
+    margin-bottom: 1rem;
 }
 
 .social-media-ico.fb {
@@ -55,12 +54,13 @@ body {
     border-color: rgb(148 163 184 / var(--tw-border-opacity));
 }
 
-.social-media-ico img{
+.social-media-ico img {
     position: absolute;
     width: 24px;
+    height: 24px;
 }
 
-.social-media-ico span{
+.social-media-ico span {
     width: 100%;
     text-align: center;
     padding-inline: 1rem;
@@ -72,6 +72,7 @@ body {
     color: rgb(0 0 0 / 50%);
     margin: 8px 0px;
 }
+
 .hr-sect:before,
 .hr-sect:after {
     content: "";
@@ -92,12 +93,67 @@ a {
     text-decoration: none;
 }
 
-.btn-a{
+a:hover {
+    text-decoration: underline;
+}
+
+.btn-a {
     background: transparent;
     border: none;
-    color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));
+    color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
 }
 
 .btn-a:hover {
     --bs-link-color-rgb: var(--bs-link-hover-color-rgb);
+    text-decoration: underline;
+}
+
+.footer-login {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    margin-top: 1.5rem;
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-height:768px) {
+    #alternative_login {
+        display: flex;
+        margin-bottom: .5rem;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .social-media-ico {
+        margin-bottom: 0 !important;
+        width: auto !important;
+    }
+
+    .social-media-ico img {
+        position: relative;
+    }
+
+    .social-media-ico span {
+        display: none;
+    }
+    
+    .mb-3 {
+        margin-bottom: .5rem !important;
+    }
+
+    .btn-submit {
+        width: 50% !important;
+        padding: .2rem;
+    }
+
+    #form {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width:1024px) {
+
 }
