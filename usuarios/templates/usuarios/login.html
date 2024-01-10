@@ -9,6 +9,7 @@
     <!-- LINKS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/login/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/basesite/base.css' %}">
     <!-- SCRIPTS -->
     <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/login/login.js' %}"></script>
@@ -36,7 +37,9 @@
                             <input type="password" name="senha" class="form-control" id="floatingPassword" placeholder="Password">
                             <label for="floatingPassword">Senha</label>
                         </div>
-                        <a class="w-100 text-end mb-3" href="">Esqueci minha senha</a>
+                        <button type="button" class="w-100 text-end mb-3 btn-a">
+                            Esqueci minha senha
+                        </button>
                         <button type="submit" class="btn btn-primary btn-lg w-75 btn-submit btn-4 mb-3">Login</button>
                         <div class="hr-sect w-100">
                             <span>
@@ -54,10 +57,15 @@
                             </button>
                         </div>
                     </form>
+                    <div class="footer-login">
+                        <span>
+                            Ainda não tem cadastro?
+                        </span>
+                        <button type="button" class="btn-a">
+                            Cadastrar
+                        </button>
+                    </div>
                 </div>
-                <!-- <div>
-                    Ainda não tem uma conta? Cadastre-se aqui
-                </div> -->
             </div>
         </div>
     </div>
